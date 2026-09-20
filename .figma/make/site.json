@@ -1,0 +1,10 @@
+{
+  "description": "Enables clients to browse beauty services, book appointments with upfront payment, and view portfolios while providing admins an efficient booking dashboard.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
