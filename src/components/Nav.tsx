@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import logoUrl from '../assets/logo.png'
+import logoUrl from '../assets/aj-glam-lab-logo.jpg'
 
 interface NavProps {
   onBookNow: () => void
@@ -28,12 +28,16 @@ export default function Nav({ onBookNow, onAdminClick, isAdmin }: NavProps) {
     >
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         <button onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false) }} className="flex items-center gap-2 focus:outline-none">
-          <img src={logoUrl} alt="Lashed by Ruby" className="h-10 w-10 rounded-full object-cover" />
+          <img
+            src={logoUrl}
+            alt="AJ's Glam Lab"
+            className="h-10 w-16 object-contain mix-blend-multiply"
+          />
           <span
             className="text-lg font-semibold hidden sm:block"
             style={{ fontFamily: "'Playfair Display', serif", color: 'var(--primary)' }}
           >
-            Lashed by Ruby
+            AJ's Glam Lab
           </span>
         </button>
 

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import logoUrl from '../assets/logo.png'
+import logoUrl from '../assets/aj-glam-lab-logo.jpg'
 
 type PaymentStatus = 'paid' | 'pending' | 'failed'
 type ViewMode = 'list' | 'calendar'
@@ -18,14 +18,14 @@ interface Booking {
 }
 
 const MOCK_BOOKINGS: Booking[] = [
-  { id: 'LBR-A1B2C3', clientName: 'Amara Okafor', phone: '+234 803 111 2222', service: 'Volume Lash Extensions', date: 'Today', time: '9:00 AM', amount: 110, deposit: 20, status: 'paid', isNew: true },
-  { id: 'LBR-D4E5F6', clientName: 'Chidinma Eze', phone: '+234 806 333 4444', service: 'Hybrid Lashes + Gel Nails', date: 'Today', time: '11:00 AM', amount: 140, deposit: 20, status: 'paid', isNew: true },
-  { id: 'LBR-G7H8I9', clientName: 'Fatima Ibrahim', phone: '+234 812 555 6666', service: 'Lash Lift & Tint', date: 'Today', time: '2:00 PM', amount: 65, deposit: 20, status: 'pending', isNew: false },
-  { id: 'LBR-J1K2L3', clientName: 'Blessing Nwosu', phone: '+234 817 777 8888', service: 'Classic Lash Extensions', date: 'Tomorrow', time: '10:00 AM', amount: 80, deposit: 20, status: 'paid', isNew: false },
-  { id: 'LBR-M4N5O6', clientName: 'Adaeze Chukwu', phone: '+234 809 999 0000', service: 'Acrylic Nail Set', date: 'Tomorrow', time: '1:00 PM', amount: 55, deposit: 20, status: 'paid', isNew: false },
-  { id: 'LBR-P7Q8R9', clientName: 'Yetunde Adeyemi', phone: '+234 802 123 4567', service: 'Volume Lashes + Nail Art', date: 'Fri, Sep 20', time: '11:00 AM', amount: 125, deposit: 20, status: 'pending', isNew: false },
-  { id: 'LBR-S1T2U3', clientName: 'Ngozi Obi', phone: '+234 815 234 5678', service: 'Lash Fill (2 weeks)', date: 'Fri, Sep 20', time: '3:00 PM', amount: 55, deposit: 20, status: 'failed', isNew: false },
-  { id: 'LBR-V4W5X6', clientName: 'Kemi Fashola', phone: '+234 808 345 6789', service: 'Hybrid Lash Extensions', date: 'Sat, Sep 21', time: '9:00 AM', amount: 95, deposit: 20, status: 'paid', isNew: false },
+  { id: 'AJG-A1B2C3', clientName: 'Amara Okafor', phone: '+234 803 111 2222', service: 'Volume Lash Extensions', date: 'Today', time: '9:00 AM', amount: 110, deposit: 20, status: 'paid', isNew: true },
+  { id: 'AJG-D4E5F6', clientName: 'Chidinma Eze', phone: '+234 806 333 4444', service: 'Hybrid Lashes + Gel Nails', date: 'Today', time: '11:00 AM', amount: 140, deposit: 20, status: 'paid', isNew: true },
+  { id: 'AJG-G7H8I9', clientName: 'Fatima Ibrahim', phone: '+234 812 555 6666', service: 'Lash Lift & Tint', date: 'Today', time: '2:00 PM', amount: 65, deposit: 20, status: 'pending', isNew: false },
+  { id: 'AJG-J1K2L3', clientName: 'Blessing Nwosu', phone: '+234 817 777 8888', service: 'Classic Lash Extensions', date: 'Tomorrow', time: '10:00 AM', amount: 80, deposit: 20, status: 'paid', isNew: false },
+  { id: 'AJG-M4N5O6', clientName: 'Adaeze Chukwu', phone: '+234 809 999 0000', service: 'Acrylic Nail Set', date: 'Tomorrow', time: '1:00 PM', amount: 55, deposit: 20, status: 'paid', isNew: false },
+  { id: 'AJG-P7Q8R9', clientName: 'Yetunde Adeyemi', phone: '+234 802 123 4567', service: 'Volume Lashes + Nail Art', date: 'Fri, Sep 20', time: '11:00 AM', amount: 125, deposit: 20, status: 'pending', isNew: false },
+  { id: 'AJG-S1T2U3', clientName: 'Ngozi Obi', phone: '+234 815 234 5678', service: 'Lash Fill (2 weeks)', date: 'Fri, Sep 20', time: '3:00 PM', amount: 55, deposit: 20, status: 'failed', isNew: false },
+  { id: 'AJG-V4W5X6', clientName: 'Kemi Fashola', phone: '+234 808 345 6789', service: 'Hybrid Lash Extensions', date: 'Sat, Sep 21', time: '9:00 AM', amount: 95, deposit: 20, status: 'paid', isNew: false },
 ]
 
 const STATUS_STYLES: Record<PaymentStatus, { bg: string; color: string; label: string }> = {
@@ -66,7 +66,11 @@ export default function AdminDashboard({ onClientView }: { onClientView: () => v
         }}
       >
         <div className="flex items-center gap-2">
-          <img src={logoUrl} alt="Lashed by Ruby" className="w-8 h-8 rounded-full object-cover" />
+          <img
+            src={logoUrl}
+            alt="AJ's Glam Lab"
+            className="w-12 h-8 object-contain mix-blend-multiply"
+          />
           <div>
             <p
               className="text-sm font-bold leading-tight"
@@ -74,7 +78,7 @@ export default function AdminDashboard({ onClientView }: { onClientView: () => v
             >
               Admin Dashboard
             </p>
-            <p className="text-xs" style={{ color: 'var(--muted-foreground)' }}>Ruby's Bookings</p>
+            <p className="text-xs" style={{ color: 'var(--muted-foreground)' }}>AJ's Glam Lab Bookings</p>
           </div>
           {newBookings.length > 0 && (
             <span

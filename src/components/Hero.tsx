@@ -29,9 +29,9 @@ export default function Hero({ onBookNow }: HeroProps) {
             className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-6"
             style={{ fontFamily: "'Playfair Display', serif", color: 'var(--foreground)' }}
           >
-            <span style={{ color: 'var(--primary)' }}>Lashed</span>
+            <span style={{ color: 'var(--primary)' }}>AJ's</span>
             <br />
-            <span className="italic">by Ruby</span>
+            <span className="italic">Glam Lab</span>
           </h1>
           <p
             className="text-base sm:text-lg leading-relaxed mb-8 max-w-md mx-auto md:mx-0"

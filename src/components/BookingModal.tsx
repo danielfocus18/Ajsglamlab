@@ -49,7 +49,7 @@ export default function BookingModal({ selectedServiceIds, onClose }: BookingMod
   const [selectedTime, setSelectedTime] = useState<string | null>(null)
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
-  const [paymentRef] = useState(`LBR-${Math.random().toString(36).slice(2, 8).toUpperCase()}`)
+  const [paymentRef] = useState(`AJG-${Math.random().toString(36).slice(2, 8).toUpperCase()}`)
 
   const services: Service[] = selectedServiceIds
     .map(id => ALL_SERVICES.find(s => s.id === id)!)
@@ -287,7 +287,7 @@ export default function BookingModal({ selectedServiceIds, onClose }: BookingMod
                     onBlur={e => (e.target.style.borderColor = 'var(--border)')}
                   />
                   <p className="text-xs mt-1.5" style={{ color: 'var(--muted-foreground)' }}>
-                    Ruby will send your booking confirmation via WhatsApp.
+                    AJ's Glam Lab will send your booking confirmation via WhatsApp.
                   </p>
                 </div>
               </div>
@@ -445,7 +445,7 @@ export default function BookingModal({ selectedServiceIds, onClose }: BookingMod
               </div>
 
               <p className="text-xs" style={{ color: 'var(--muted-foreground)' }}>
-                Ruby will confirm via WhatsApp on <strong>{phone}</strong> shortly.
+                AJ's Glam Lab will confirm via WhatsApp on <strong>{phone}</strong> shortly.
               </p>
 
               <button
